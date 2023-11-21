@@ -1,0 +1,13 @@
+version: '3.8'
+
+## 單機
+services:
+  nginx_replica:
+    image: nginx:latest
+#    ports:
+#      - "8084:80"
+    deploy:
+      replicas: 2
+
+  ubuntu:
+    image: ubuntu:22.04

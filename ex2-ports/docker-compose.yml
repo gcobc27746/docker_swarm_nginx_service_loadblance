@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  nginx_nw:
+    image: nginx:latest
+    networks:
+      - test-nw
+    ports:
+      - "8081:80"
+
+  nginx_nw_2:
+    image: nginx:latest
+    networks:
+      - test-nw
+    ports:
+      - "8082:80"
+
+  nginx_default:
+    image: nginx:latest
+    ports:
+      - "8083:80"

@@ -1,0 +1,18 @@
+version: '3.8'
+
+## 多機
+services:
+  nginx_replica_v2:
+    image: nginx:latest
+    ports:
+      - "8085:80"
+    deploy:
+      replicas: 2
+
+  ubuntu_v2:
+    image: ubuntu:22.04
+    deploy:
+      placement:
+        constraints:
+          - node.labels.zone == fs
+

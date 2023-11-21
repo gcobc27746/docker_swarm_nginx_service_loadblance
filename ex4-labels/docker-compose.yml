@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+
+  ubuntu_label:
+    image: ubuntu:22.04
+    deploy:
+      placement:
+        constraints:
+          - node.labels.zone == aaa
+
+  ubuntu_label2:
+    image: ubuntu:22.04
+    deploy:
+      placement:
+        constraints:
+          - node.labels.zone == bbb
+
