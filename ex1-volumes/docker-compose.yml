@@ -3,8 +3,10 @@ version: '3.8'
 services:
   ubuntu_nv:
     image: ubuntu:22.04
+    tty: true
 
   ubuntu_v:
     image: ubuntu:22.04
+    tty: true
     volumes:
       - "./test:/TESTDATA"

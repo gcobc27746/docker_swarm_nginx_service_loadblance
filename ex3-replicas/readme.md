@@ -8,9 +8,9 @@
 佈署方式
 ![img.png](img.png)
 ```shell
-docke stack deploy -c dcoker-compose.yml [ServiceName]
+docker-compose -f docker-compose.yml up -d
 
-docke stack deploy -c dcoker-compose-v2.yml [ServiceName]
+docker stack deploy -c dcoker-compose-v2.yml [ServiceName]
 
 ```
 

@@ -11,8 +11,5 @@ services:
 
   ubuntu_v2:
     image: ubuntu:22.04
-    deploy:
-      placement:
-        constraints:
-          - node.labels.zone == fs
+    tty: true
 

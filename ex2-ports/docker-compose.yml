@@ -1,5 +1,9 @@
 version: '3.8'
 
+networks:
+  test-nw:
+    external: true
+
 services:
   nginx_nw:
     image: nginx:latest
